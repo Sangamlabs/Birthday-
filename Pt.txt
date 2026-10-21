@@ -1,0 +1,134 @@
+Build a premium, fully responsive personal developer portfolio website for Sangamlabs.
+
+IMPORTANT: This is a real personal portfolio website for a college assignment and professional presentation. Do not add any text such as "demo website", "AI-generated website", "sample portfolio", "template preview", or "made for an assignment" anywhere on the public-facing website.
+
+Design direction
+
+Create a unique, premium, futuristic developer portfolio inspired by high-end software engineer portfolios. Use a deep charcoal/black background, subtle violet and electric-blue accents, elegant typography, smooth scrolling, tasteful glow effects, refined micro-interactions, and excellent spacing.
+
+Avoid generic AI-generated layouts, excessive gradients, unnecessary animations, and oversized empty sections. Make the website feel carefully designed by a professional developer.
+
+Personal identity
+
+Name: Sangamlabs
+Role: Developer | B.Tech AI/ML Student | Tech Creator
+Headline: "Building ideas into digital experiences."
+Short bio: "I explore software development, AI-powered applications, automation, and creative digital experiences. I enjoy turning ideas into useful products and continuously learning new technologies."
+
+Use editable content for all personal information. Do not invent a university name, GPA, awards, employment history, clients, revenue, or professional certifications.
+
+Required sections
+
+1. Navigation bar with Home, About, Projects, Skills, and Contact.
+2. Hero section with my name, professional headline, short introduction, social links, and functional CTA buttons.
+3. About section with education, interests, development approach, and personal goals.
+4. Featured Projects section with polished project cards:
+   - Yuki Voice Assistant: a personal voice-assistant project with wake-word detection, speech interaction, and AI integrations.
+   - Akhyana: a dark fantasy novel-reading website with chapter navigation and content management.
+   - Telegram Bots: a collection of automation, utility, and interactive bot projects.
+   - Developer Experiments: a collection of smaller technical projects and experiments.
+     Use accurate project descriptions. Clearly distinguish implemented features from planned features. Never fabricate usage statistics or claim that an unfinished project is production-ready.
+5. Skills section featuring Python, JavaScript/TypeScript, React, APIs, Git/GitHub, automation, and AI/ML fundamentals. Present them without fabricated proficiency percentages.
+6. GitHub section with a button linking to my actual profile.
+7. Contact section with working social links and a functional email link when a real email is provided.
+8. Footer with copyright year and navigation links.
+
+Functional requirements
+
+- Responsive on mobile, tablet, and desktop.
+- Working navigation and smooth scrolling.
+- Functional buttons and external links.
+- Accessible contrast, semantic HTML, keyboard navigation, and reduced-motion support.
+- Proper page title, meta description, Open Graph metadata, favicon, and SEO-friendly structure.
+- Optimized assets, fast loading, and no unnecessary dependencies.
+- No fake testimonials, fake activity graphs, fake GitHub statistics, fake contact details, or fake achievements.
+- Do not expose API keys or secrets in frontend code.
+- Use reusable components and maintainable code.
+
+Visual details
+
+Use subtle animated background elements, a custom monogram logo, clean project cards, elegant section transitions, and tasteful hover states. Make it feel original and memorable rather than like a standard portfolio template.
+
+Final deliverable
+
+Generate the complete working website in the supported project environment. Resolve build errors, verify responsiveness, and ensure all navigation and interactive elements work. Use placeholder values only for personal information that I have not provided, and make those values easy to replace before publishing.
+Upgrade the Sangamlabs personal developer portfolio into a premium, multi-page animated web experience.
+
+TECH STACK:
+Use React, TypeScript, Vite, React Router, Tailwind CSS if supported, and Framer Motion or Motion for React. Use Lucide icons where appropriate. Follow the environment's supported dependencies.
+
+DESIGN:
+Create an original, premium dark developer portfolio with a near-black background, restrained violet and electric-blue accents, crisp typography, subtle glass effects, fine borders, and carefully controlled motion. It must look like a professionally crafted personal website, not a generic AI template.
+
+1. CINEMATIC ENTRY ANIMATION
+
+- On the first visit, show a short branded intro with a Sangamlabs monogram.
+- Animate the logo with opacity, scale, a subtle glow, and a moving light line.
+- Transition smoothly into the homepage hero.
+- Keep the intro short, approximately 1–2 seconds.
+- Provide a skip option and respect prefers-reduced-motion.
+- Do not replay the full intro on every route navigation.
+
+2. HERO SECTION
+
+- Present Sangamlabs as a developer, B.Tech AI/ML student, and tech creator.
+- Headline: "Building ideas into digital experiences."
+- Add an animated role-text effect, a subtle animated background, and a scroll indicator.
+- Include buttons for View Projects, GitHub, Telegram, and Contact.
+- Use authentic personal information only.
+
+3. SCROLL-TRIGGERED ANIMATIONS
+
+- Reveal headings, text, images, and cards as they enter the viewport.
+- Use staggered fade-up transitions, subtle slide-ins, and gentle scale transitions.
+- Add tasteful hover effects and optional subtle card tilt on desktop.
+- Avoid excessive motion, lag, layout shifts, and animations that obstruct reading.
+- Use IntersectionObserver or Motion viewport triggers efficiently.
+- Ensure the page remains usable on low-powered devices and mobile.
+
+4. MULTI-PAGE ROUTING
+   Create separate, directly accessible routes:
+
+- / — Home and hero
+- /about — Personal profile and education
+- /github — GitHub profile and selected repositories
+- /socials — Telegram, YouTube, and other social profiles
+- /projects — Project portfolio
+- /projects/yuki — Yuki AI Voice Assistant
+- /projects/akhyana — Akhyana novel website
+- /certificates — Certificate gallery
+- /contact — Contact information
+
+Add a premium sticky navbar with active-route indicators, mobile navigation, animated page transitions, and a consistent footer. Every route must work after a browser refresh and support browser back/forward navigation.
+
+5. GITHUB PROFILE
+   Create a dedicated profile page with a username, avatar, bio, external profile link, pinned repositories, language labels, and repository descriptions.
+   Use GitHub's public API only if configured and available. Handle rate limits, loading states, and API failures gracefully. Do not fabricate contribution counts, followers, repository counts, or statistics. If live data is unavailable, show manually configured repository cards without pretending they are live.
+
+6. SOCIAL PROFILES
+   Create elegant cards for Telegram, YouTube, GitHub, and any additional configured platform. Each card must use a real URL provided in the configuration. Do not invent usernames or social URLs. External links should open safely.
+
+7. CERTIFICATES AND ACHIEVEMENTS
+   Build a responsive gallery supporting certificate image previews, title, issuer, issue date, and credential URL. Add a modal/lightbox with keyboard accessibility. Populate it from a separate data file so I can add certificates later. Never generate fake credentials or claim unearned awards.
+
+8. PROJECTS
+   Include configurable cards for Yuki AI Voice Assistant, Akhyana novel website, Telegram bots, and other projects. Each project should have its own detail page where configured. Include overview, technology stack, actual implemented features, screenshots when supplied, GitHub link, and live demo link when available. Mark planned or unfinished functionality accurately.
+
+9. ABOUT AND SKILLS
+   Include a personal introduction, education, interests, development philosophy, and technology stack. Display skills as labels or grouped categories instead of fabricated proficiency percentages.
+
+10. CODE QUALITY AND PERFORMANCE
+
+- Use reusable React components and typed data models.
+- Keep personal profile links and project information in a central configuration file.
+- Add SEO metadata, page titles, Open Graph tags, and a favicon.
+- Support mobile, tablet, and desktop.
+- Implement semantic HTML, keyboard accessibility, visible focus states, and reduced-motion preferences.
+- Prevent horizontal overflow and layout shifts.
+- Add polished loading, empty, and error states.
+- Never expose API secrets in client code.
+
+11. FINAL VERIFICATION
+    Generate the complete runnable project, not just a static mockup. Check TypeScript errors, route handling, responsive layouts, external links, animation behavior, and browser refreshes. Fix all build errors before finishing. Give me the commands to run and deploy the site.
+
+Do not include any public-facing wording that describes the website as a demo, sample, template, or AI-generated project. The website should be an honest personal portfolio using real, editable details.
