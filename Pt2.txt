@@ -1,0 +1,128 @@
+Build a complete, production-quality, responsive portfolio website for Sangamlabs using React, TypeScript, Vite, and Tailwind CSS. Use the supplied Mainframe landing page specification as visual and interaction inspiration, but adapt the branding, copy, and navigation for a personal developer portfolio.
+
+1. Typography
+
+Load the supplied Helvetica Now Display Medium and Regular stylesheet links in index.html. Define --font-heading and --font-body CSS variables in index.css. Use the body font throughout the site and the heading font for the Sangamlabs logo and selected headings.
+
+2. Interactive background video
+
+Use the supplied MP4 as a fixed, full-viewport background:
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260530_042513_df96a13b-6155-4f6e-8b93-c9dee66fba08.mp4
+
+- Position fixed, inset 0, object-fit cover, object-position 70% center.
+- Use muted, playsInline, preload="auto". Never autoplay.
+- Implement horizontal pointer-driven video scrubbing with sensitivity 0.8.
+- Track pointer delta and calculate the target timestamp relative to video duration.
+- Clamp the target timestamp to the valid duration.
+- Prevent seek flooding by maintaining a target time and scheduling the next seek after the current seek completes.
+- Handle metadata loading, seeking, video errors, reduced-motion preferences, and touch devices gracefully.
+- Add a subtle dark or translucent overlay when needed to maintain readable text.
+- Provide a static background fallback if the video cannot load.
+
+3. Fixed navigation
+
+Create a fixed, accessible navbar with Sangamlabs branding and a decorative asterisk mark.
+
+Desktop links:
+Home, About, Projects, GitHub, Socials, Certificates, Contact.
+
+Use the same minimalist typography, spacing, hover transitions, and responsive layout described in the supplied reference.
+
+On mobile, use a three-bar hamburger that animates into a close icon. Show a white translucent full-screen navigation overlay with accessible links. Close the menu after navigation and support keyboard navigation.
+
+4. Hero content
+
+Build a full-height hero with responsive alignment and horizontal padding.
+
+Intro label:
+"Hey there, meet Sangamlabs,"
+"Developer • AI/ML Student • Tech Creator"
+
+Apply a soft blur to the intro label, keeping it decorative and non-interactive.
+
+Typewriter introduction:
+"Glad you're here. I build software, experiment with AI, and turn ideas into digital experiences."
+
+Implement a reusable useTypewriter hook with configurable typing speed and start delay. Render a blinking cursor until typing completes. Clean up intervals and timeouts correctly.
+
+5. Action buttons
+
+Reveal the hero buttons independently after 400 ms with a fade-in and upward movement. Do not wait for the typewriter animation to finish.
+
+Buttons:
+
+- Explore Projects
+- GitHub Profile
+- Telegram
+- About Me
+
+Add a separate email contact pill with a copy icon. Only display a real email address supplied in the portfolio configuration. Copy using the Clipboard API, with an accessible fallback or error message when clipboard access is unavailable.
+
+Use genuine URLs from a centralized configuration file. Never invent contact information.
+
+6. Interactive avatar
+
+Add a prominent AI avatar alongside the hero content.
+
+Prefer a genuine 3D character with a compatible GLB/GLTF model, head and eye controls, and an idle animation. Implement smooth cursor-follow head rotation, subtle gaze tracking, and natural return to neutral when the pointer stops.
+
+Do not fake actual 3D articulation with a single flat image. If a real 3D model asset is not provided, create a clear placeholder component and document exactly where the model file should be placed.
+
+The avatar must:
+
+- Load asynchronously without blocking the hero.
+- Follow the pointer smoothly and clamp rotations.
+- Respect reduced-motion preferences.
+- Support a static mobile fallback when necessary.
+- Fade out as the user scrolls away from the hero.
+- Never obscure navigation, project cards, or other page content.
+
+Keep the 3D implementation isolated so it can be disabled without breaking the website.
+
+7. Scroll animations
+
+Use IntersectionObserver or an appropriate lightweight motion implementation to animate content as it enters the viewport.
+
+Include:
+
+- Staggered fade-up reveals.
+- Heading and paragraph reveals.
+- Gentle image parallax.
+- Subtle project-card hover transitions.
+- Scroll progress indicator.
+- Smooth section navigation.
+- Consistent transitions between separate routes.
+
+Animations must not block scrolling, create layout shifts, or continually replay when users move slightly back and forth. Respect prefers-reduced-motion.
+
+8. Remaining portfolio pages
+
+Create working routes:
+
+- / — animated hero
+- /about — profile and education
+- /projects — project collection
+- /projects/yuki — Yuki AI voice assistant
+- /projects/akhyana — Akhyana novel website
+- /github — GitHub profile and selected repositories
+- /socials — Telegram, YouTube, and other supplied profiles
+- /certificates — certificate gallery
+- /contact — contact details
+
+Use editable local TypeScript data for profile information, project details, social links, and certificates. Do not fabricate achievements, statistics, credentials, or unfinished features.
+
+The certificates page should support local images and PDFs, previews, and genuine verification links when provided. Show a polished empty state when there are no certificates.
+
+9. Static deployment
+
+The entire project must work without a backend or database.
+
+- Use React, TypeScript, Vite, and Tailwind CSS.
+- Add SPA fallback routing for Netlify.
+- Use local static assets where practical.
+- Include a valid netlify.toml and production build configuration.
+- Never expose secrets in frontend code.
+- Avoid unnecessary dependencies. Add a 3D rendering dependency only if needed for the genuine 3D avatar.
+- Ensure npm run build completes successfully.
+
+Deliver the complete source code, reusable components, hooks, CSS, configuration, and deployment instructions. Test navigation, direct route refreshes, video scrubbing, mobile layout, pointer tracking, reduced-motion behavior, and missing-asset fallbacks. Do not return only a design mockup.
