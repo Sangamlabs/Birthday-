@@ -1,0 +1,35 @@
+Frontend-Only Certificate Management
+
+Keep the entire portfolio completely static and frontend-only. Do not create a backend, database, authentication system, or admin panel.
+
+Create a premium Certificates page with the following features:
+
+1. Load certificate information from "src/data/certificates.ts".
+2. Store certificate images and PDFs inside "public/certificates/".
+3. Display certificates in animated, responsive cards with title, issuer, issue date, and credential link when available.
+4. Clicking a certificate image should open an elegant lightbox preview.
+5. Provide a View Certificate button that opens the image or PDF, and a Verify Credential button only when a genuine verification URL is provided.
+6. If no certificates have been added yet, show a polished empty state such as "Certificates will be added here soon." Do not display fabricated certificates, fake issuers, or imaginary credentials.
+7. Make adding a certificate easy: add its image file to the public folder and add its metadata to the TypeScript data file.
+8. Keep certificate cards, preview animations, and page transitions entirely client-side.
+9. Ensure all assets work on Netlify after deployment.
+
+Use the same frontend-only approach for projects, education, social profiles, and other portfolio content. The site must build successfully with "npm run build" and deploy as a static website to Netlify.
+Static Deployment Requirements — Netlify
+
+Build this project as a completely static frontend application. No backend, server, database, authentication service, serverless function, or paid API is required.
+
+- Use React, TypeScript, and Vite.
+- Configure the production build output directory as "dist".
+- Add a "netlify.toml" file with the correct build command and publish directory.
+- Configure SPA fallback routing so direct visits and page refreshes work for routes such as "/github", "/certificates", "/socials", and "/projects/yuki".
+- Store profile information, social URLs, project data, skills, education, and certificate metadata in local TypeScript or JSON files.
+- Store static images and certificate files in the public assets directory.
+- Implement all entrance, scroll, hover, and page-transition animations entirely in the browser.
+- Do not include backend endpoints, database connections, or private API keys.
+- Fetch public GitHub information from the browser only when needed, with loading and error states. Provide static repository fallbacks.
+- Use a "mailto:" link for email contact rather than building a contact backend.
+- Make the entire site deployable by importing the GitHub repository into Netlify or uploading the production build directory.
+- Include clear deployment instructions and ensure "npm run build" succeeds.
+
+The final deliverable must be a working static website, not merely a visual mockup.
